@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv sh
+
+if [ ! -d /config/etc ]
+then
+	mkdir /config/etc
+	cp /defaults/config/etc/* /config/etc/
+fi
+
+if [ ! -d /config/var ]
+then
+	mkdir -p /config/var/dnsmasq
+fi
